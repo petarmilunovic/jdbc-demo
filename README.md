@@ -16,16 +16,18 @@ Before running the application, ensure you have the following:
 ### Setup Instructions
 
 1. Clone the Repository:
+   
    ```bash
    git clone https://github.com/petarmilunovic/jdbc-demo.git
    cd jdbc-demo
 
-2. Add MySQL Connector/J to your project:
+3. Add MySQL Connector/J to your project:
 - Download the `mysql-connector-java-8.0.22` library  from the [MySQL website](https://downloads.mysql.com/archives/c-j/).
 - Add the JAR file to your project’s classpath.
 
 3. Configure Database Connection:
 - Import the provided database schema `jdbc_demo.sql` into your **empty** MySQL database. The schema is ****essential**** as it contains the specific columns and data types required by the application:
+  
     ```bash
     mysql -u your-username -p your-empty-database < "absolute_path/to/jdbc_demo.sql"
 - Modify the `connect()` method in `Database.java` file to use your database’s details and credentials.
